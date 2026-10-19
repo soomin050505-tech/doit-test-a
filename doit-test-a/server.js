@@ -36,6 +36,12 @@ app.put('/todo/:id', (req, res) => {
   res.redirect('/');
 });
 
+app.delete('/todo/:id', (req, res) => {
+  const id = Number(req.params.id);
+  todos = todos.filter(t => t.id !== id);
+  res.redirect('/');
+});
+
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });
