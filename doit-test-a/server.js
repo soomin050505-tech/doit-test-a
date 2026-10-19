@@ -45,3 +45,4 @@ app.delete('/todo/:id', (req, res) => {
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });
+module.exports = app;
